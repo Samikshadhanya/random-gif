@@ -1,0 +1,7 @@
+{
+  "name": "random-gif",
+  "version": "1.0.0",
+  "description": "Random GIF endpoint for GitHub README",
+  "main": "api/random-gif.js",
+  "license": "MIT"
+}
