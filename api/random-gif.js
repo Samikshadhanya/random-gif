@@ -9,7 +9,11 @@ export default function handler(req, res) {
 
   const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
 
-  // Redirect to the chosen GIF
+  // Prevent GitHub from caching
+  res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+  res.setHeader("Pragma", "no-cache");
+  res.setHeader("Expires", "0");
+
   res.writeHead(302, { Location: randomGif });
   res.end();
 }
